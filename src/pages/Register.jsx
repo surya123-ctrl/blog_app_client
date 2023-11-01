@@ -11,7 +11,10 @@ const Register = () => {
         <button>Sign-up</button>
         <p>This is an error!</p>
         <span>
-          Do you have an account? <Link to="/login">Login</Link>
+          Do you have an account?{" "}
+          <Link className="sign-up" to="/login">
+            Login
+          </Link>
         </span>
       </form>
     </div>

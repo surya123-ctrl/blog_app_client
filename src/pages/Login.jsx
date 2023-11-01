@@ -10,7 +10,10 @@ const Login = () => {
         <button>Login</button>
         <p>This is an error!</p>
         <span>
-          Don't have an account? <Link to="/register">Sign-up</Link>
+          Don't have an account?{" "}
+          <Link className="sign-up" to="/register">
+            Sign-up
+          </Link>
         </span>
       </form>
     </div>

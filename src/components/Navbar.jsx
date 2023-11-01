@@ -24,10 +24,10 @@ const Navbar = () => {
           <Link className="link" to="?cat=food">
             <h6>Food</h6>
           </Link>
-          <span className="link">Surya</span>
-          <span className="link">Logout</span>
-          <span className="write">
-            <Link className="link" to="/write">
+          <span className="link main-link">Surya</span>
+          <span className="link main-link">Logout</span>
+          <span className="write main-link">
+            <Link className="link main-link" to="/write">
               Create Post
             </Link>
           </span>

@@ -4,9 +4,16 @@ $red: #bf0000;
 $light-red: #940000;
 $snow: #f5fefd;
 $white: #ffffff;
+$large: 1008px;
+$medium: 735px;
+$second-medium: 640px;
+$small: 420px;
 
 * {
-    margin: 0px;
+    background-color: $black;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .app {
@@ -14,10 +21,14 @@ $white: #ffffff;
     justify-content: center;
     background-color: $black;
     color: rgb(255, 255, 255);
+    margin-left: 10px;
+    margin-right: 10px;
 
     // height: 100vh;
     .container {
-        width: 1024px;
+        // width: 1024px;
+        width: 100%;
+        // width: fit-content;
 
         .link {
             text-decoration: none;
@@ -46,7 +57,7 @@ $white: #ffffff;
                 flex-direction: column;
                 padding: 10px;
                 background-color: white;
-                width: 200px;
+                width: 400px;
                 gap: 20px;
             }
 
@@ -54,6 +65,7 @@ $white: #ffffff;
                 padding: 10px;
                 border: none;
                 border-bottom: 1px solid $red;
+                background-color: $white;
             }
 
             button {
@@ -68,12 +80,19 @@ $white: #ffffff;
             span {
                 font-size: 12px;
                 text-align: center;
+                background-color: $white;
+                color: $black;
+
+                .sign-up {
+                    background-color: $white;
+                }
             }
 
             p {
                 font-size: 12px;
                 text-align: center;
                 color: $red;
+                background-color: $white;
             }
         }
     }
@@ -82,8 +101,11 @@ $white: #ffffff;
     //Navbar
 
     .navbar {
+        margin-top: 10px;
+
         .container {
-            padding: 10px 0px;
+            // width: 1024px;
+            // padding: 10px 0px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -141,6 +163,12 @@ $white: #ffffff;
         justify-content: center;
         font-size: 12px;
         justify-content: space-between;
+
+        div,
+        span,
+        b {
+            background-color: $red;
+        }
     }
 
 
@@ -204,7 +232,7 @@ $white: #ffffff;
                 }
 
                 .content {
-                    flex: 3;
+                    flex: 5;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
@@ -247,6 +275,7 @@ $white: #ffffff;
     .single {
         display: flex;
         gap: 50px;
+        margin-top: 30px;
 
         .content {
             flex: 5;
@@ -256,8 +285,13 @@ $white: #ffffff;
 
             img {
                 width: 100%;
-                height: 300px;
+                height: 400px;
                 object-fit: cover;
+                border-radius: 25px;
+                -webkit-border-radius: 25px;
+                -moz-border-radius: 25px;
+                -ms-border-radius: 25px;
+                -o-border-radius: 25px;
             }
 
             .user {
@@ -325,6 +359,11 @@ $white: #ffffff;
                     width: 100%;
                     height: 200px;
                     object-fit: cover;
+                    border-radius: 25px;
+                    -webkit-border-radius: 25px;
+                    -moz-border-radius: 25px;
+                    -ms-border-radius: 25px;
+                    -o-border-radius: 25px;
                 }
 
                 h2 {
@@ -362,6 +401,7 @@ $white: #ffffff;
         display: flex;
         gap: 20px;
 
+        // width: 1024px;
         .content {
             flex: 5;
             display: flex;
@@ -370,11 +410,7 @@ $white: #ffffff;
 
             input {
                 padding: 10px;
-
-                // border: 2px solid $red;
-                &[type="text"]:focus {
-                    border: 2px solid $red;
-                }
+                color: $red;
             }
 
             .editorContainer {
@@ -460,11 +496,308 @@ $white: #ffffff;
                         }
                     }
                 }
+
                 .cat {
                     display: flex;
                     align-items: center;
                     gap: 10px;
                     color: $light-red;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $large) {
+    .app {
+        .container {
+            width: 100%;
+
+
+            .home {
+                .posts {
+                    .post {
+                        gap: 50px;
+
+                        .img {
+                            flex: 4
+                        }
+
+                        .content {
+                            width: 100%;
+
+                            h1 {
+                                font-size: 30px;
+                            }
+
+                            p {
+                                font-size: 15px;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $medium) {
+    .app {
+        .container {
+
+
+            .home {
+                .posts {
+                    gap: 50px;
+
+                    .post {
+                        display: block;
+                        gap: 50px;
+
+                        .img {
+                            // flex: 4
+                            width: 80%;
+                            margin: auto;
+                        }
+
+                        .content {
+                            width: 100%;
+                            margin: auto;
+
+                            h1 {
+                                font-size: 24px;
+                                text-align: center;
+                            }
+
+                            p {
+                                margin-top: 10px;
+                                font-size: 13px;
+                            }
+
+                            button {
+
+                                margin: auto;
+                                margin-top: 20px;
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .single {
+                margin-top: 30px;
+                display: block;
+                gap: 50px;
+                width: auto;
+
+                .content {
+                    // margin: auto;
+                    width: 90%;
+                    margin: auto;
+
+
+                    img {
+                        // padding: 10px;
+                        width: 85%;
+                        margin-left: 15%;
+                    }
+
+                    .user {
+                        margin: auto;
+
+                        img {
+                            width: 100px;
+                            height: 100px;
+                            border-radius: 50%;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            -ms-border-radius: 50%;
+                            -o-border-radius: 50%;
+                            object-fit: cover;
+                        }
+
+                        .info {
+                            span {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+
+
+                    h1 {
+                        width: 85%;
+                        // margin: auto;
+                        margin-left: 20%;
+                    }
+
+                    p {
+                        width: 80%;
+                        // padding: 10px;
+                        margin-left: 20%;
+                    }
+                }
+
+                .menu {
+
+                    h1 {
+                        width: 85%;
+                        margin-left: 20%;
+                        margin-top: 20px;
+                        font-size: 30px;
+                    }
+
+                    .post {
+                        width: 75%;
+                        margin-left: 20%;
+
+                        button {
+                            margin: auto;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $second-medium) {
+    .app {
+        .container {
+            width: max-content;
+
+            .home {
+                .posts {
+                    width: 90%;
+                    padding-left: 10%;
+                    margin-left: auto;
+
+                    .post {
+                        .content {
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+
+            footer {
+                // width: 100%;
+                margin: auto;
+                margin-top: 100px;
+
+                justify-content: space-evenly;
+
+                div,
+                span,
+                b {
+                    background-color: $red;
+                }
+            }
+
+            .add {
+                display: block;
+
+                .content {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .add {
+            display: block;
+            width: 75%;
+            margin-left: 20%;
+            
+        }
+    }
+}
+
+@media only screen and (max-width: $small) {
+
+    .app {
+        .container {
+            width: max-content;
+
+            .home {
+                .posts {
+                    width: 85%;
+                    // padding-left: 10%;
+                    // margin-left: auto;
+
+                    .post {
+
+                        .content {
+                            width: 80%;
+                            margin-left: 12%;
+                        }
+                    }
+                }
+            }
+
+            footer {
+                // width: 100%;
+                margin: auto;
+                margin-top: 100px;
+                // margin-left: 25%;
+                justify-content: space-evenly;
+
+                div,
+                span,
+                b {
+                    background-color: $red;
+                }
+            }
+
+            .auth {
+
+                form {
+                    width: 200px;
+                }
+
+            }
+
+            .single {
+                .content {
+                    width: 85%;
+                    margin-left: 20%;
+
+                    img {
+                        width: 65%;
+                    }
+
+                    h1 {
+                        width: 65%;
+                    }
+
+                    p {
+                        width: 65%;
+                        margin: auto;
+                    }
+
+                    .user {
+                        .info {
+                            span {
+                                margin-left: 22%;
+                            }
+                        }
+                    }
+
+                }
+
+                .menu {
+                    width: 85%;
+                    margin-left: 20%;
+
+                    h1 {
+                        width: 65%;
+                        margin: auto;
+                    }
+
+                    .post {
+                        width: 65%;
+                        margin: auto;
+                    }
                 }
             }
         }
